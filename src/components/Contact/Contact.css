@@ -1,0 +1,139 @@
+:root {
+    --bg-color: #191f36;
+    --snd-bg-color: #262B40;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+}
+
+.contact {
+    padding: 2rem; /* Adjust padding as needed */
+    min-height: 80vh; /* Sets the minimum height to 80% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Start with the element hidden */
+    transition: opacity 6s ease-out; /* Smooth transition for opacity */
+}
+
+.fade-in {
+    opacity: 3; /* Fade in effect */
+}
+
+.me {
+    color: var(--main-color);
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 40px;
+}
+
+.desc {
+    padding: 1rem;
+    font-size: medium;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contact form {
+    max-width: 50rem;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Add space between items */
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input,
+.contact form .input-box textarea {
+    width: calc(50% - 1rem); /* Adjust width to account for gap */
+}
+
+.contact form .input-box input.sub {
+    width: 100%; /* Full width */
+}
+
+.contact form textarea {
+    width: 100%; /* Full width */
+    resize: none;
+}
+
+.contact form button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    text-decoration: none;
+    border: 2px solid var(--main-color);
+    border-radius: 50px;
+    box-shadow: 0 0 1rem var(--main-color);
+    width: 200px;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    box-shadow: none;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .desc {
+        font-size: 1.2rem;
+    }
+
+    .contact form .input-box {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .contact form .input-box input,
+    .contact form textarea {
+        width: 100%;
+    }
+
+    .contact form button {
+        width: 100%;
+    }
+}

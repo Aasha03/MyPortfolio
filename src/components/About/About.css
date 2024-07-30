@@ -1,0 +1,193 @@
+:root {
+  --bg-color: #191f36;
+  --snd-bg-color: #262B40;
+  --text-color: #fff;
+  --main-color: #59B2F4;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--snd-bg-color);
+  overflow: hidden;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.about-img {
+  margin-left: 30px;
+}
+
+.about-img img {
+  width: 350px;
+  height: 350px;
+  animation: floatImage 4s ease-in-out infinite;
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+}
+
+.heading {
+  margin-top: 0;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3 {
+  font-size: 2.2rem;
+}
+
+.about-content p {
+  font-size: 1.3rem;
+  margin: 2rem 0 3rem;
+  text-align: justify;
+  line-height: 1.6;
+  margin-right: 50px;
+  padding: 0 10px;
+}
+
+.heading span {
+  color: var(--main-color);
+}
+
+.about-skills {
+  margin-top: 20px;
+}
+
+.about-skills .heading {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.about-skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjusts the number of columns based on available space */
+  gap: 10px; /* Adds space between grid items */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-grid li {
+  background-color: #f8f8f8; /* Background color for each skill */
+  padding: 5px;
+  text-align: center; /* Centers the text inside each grid item */
+  border-radius: 4px; /* Optional: adds rounded corners to each skill */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow to each skill */
+  transition: transform 0.2s ease; /* Optional: adds a transition effect */
+}
+
+.skills-grid li:hover {
+  transform: translateY(-3px);
+  color: var(--main-color); /* Optional: moves the item slightly up on hover */
+}
+
+.about-skills li {
+  margin-bottom: 5px;
+  margin: 10px;
+  background-color: #fff;
+  color: black;
+  justify-content: center;
+  font-weight: 500;
+  width: 120px;
+  height: 30px;
+  font-size: medium;
+  border-radius: 5px;
+  padding: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about {
+  opacity: 0; /* Start with the element hidden */
+  transition: opacity 3s ease-out;
+}
+
+.about.visible {
+  animation: fadeIn 6s forwards;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 1024px) {
+  .about {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .about-img {
+    margin: 0 auto;
+  }
+
+  .about-img img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about-content {
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .about-content h2, .about-content h3 {
+    text-align: center;
+  }
+
+  .about-content p {
+    margin: 1rem 0;
+    margin-right: 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-img img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
