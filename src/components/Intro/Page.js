@@ -25,7 +25,7 @@ function Page() {
               <FontAwesomeIcon icon={faEnvelope} size="2x" />
             </a>
           </div>
-          <a href="#" className="btn">My Resume</a>
+          <a href="https://drive.google.com/file/d/1g6G6p9gEfY9nwholN5jOK93CLCF4ry42/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="btn">My Resume</a>
       </div>
       <img src={bg} alt='profile' className='bg'/>
     </section>
